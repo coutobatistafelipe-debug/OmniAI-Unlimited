@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b12">
+<title>OmniAI Unlimited — Todas as inteligências. Um só lugar.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">✳</div><div><b>OmniAI</b><span>UNLIMITED</span></div><button class="icon-btn mobile-close" id="closeSidebar" aria-label="Fechar menu">×</button></div>
+    <button class="new-chat" id="newChat">＋ <span>Nova conversa</span></button>
+    <div class="nav-label">WORKSPACE</div>
+    <button class="nav-item active" data-view="chat">◈ <span>Chat universal</span></button>
+    <button class="nav-item" data-view="models">▦ <span>Explorar modelos</span></button>
+    <button class="nav-item" data-view="tools">✧ <span>Ferramentas de IA</span></button>
+    <button class="nav-item" data-view="history">◷ <span>Histórico</span></button>
+    <div class="nav-label">ADMINISTRAÇÃO</div>
+    <button class="nav-item" data-view="admin">⚙ <span>Painel admin</span><em>ADMIN</em></button>
+    <div class="sidebar-bottom"><div class="status-dot"></div><div><b>Workspace pronto</b><small>Integrações configuráveis</small></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn menu-toggle" id="openSidebar" aria-label="Abrir menu">☰</button><div class="crumb">Workspace <span>/</span> <b id="pageName">Chat universal</b></div><div class="top-actions"><span class="plan-pill"><i></i> ADMIN UNLIMITED</span><button class="avatar" title="Perfil">A</button></div></header>
+    <section class="content" id="content">
+      <div class="hero"><div class="eyebrow"><span class="pulse"></span> SUA CENTRAL DE INTELIGÊNCIA</div><h1>Uma ideia.<br><span>Possibilidades infinitas.</span></h1><p>Converse, crie e construa com diferentes modelos de IA em um só espaço.</p>
+      <div class="model-row"><label for="modelSelect">MODELO ATUAL</label><select id="modelSelect"><option value="demo">Modo demonstração — conectar API</option><option value="openai">OpenAI (API configurada no servidor)</option><option value="compatible">Provedor compatível</option></select><span class="connect-state"><i></i> Configuração pendente</span></div></div>
+      <div class="quick-grid">
+        <button class="quick-card" data-prompt="Ajude-me a criar um site profissional e responsivo."><span class="quick-icon purple">⌘</span><b>Programação</b><small>Crie e revise código</small><span class="arrow">↗</span></button>
+        <button class="quick-card" data-prompt="Crie um texto profissional sobre esta ideia: "><span class="quick-icon blue">✎</span><b>Escrita</b><small>Transforme ideias em textos</small><span class="arrow">↗</span></button>
+        <button class="quick-card" data-prompt="Explique este assunto passo a passo: "><span class="quick-icon orange">◉</span><b>Aprendizado</b><small>Entenda temas complexos</small><span class="arrow">↗</span></button>
+        <button class="quick-card" data-prompt="Analise este documento e resuma os pontos principais: "><span class="quick-icon green">▤</span><b>Documentos</b><small>Resuma e organize arquivos</small><span class="arrow">↗</span></button>
+      </div>
+      <div class="chat-wrap"><div class="chat-heading"><div><b>Chat universal</b><small>Seu espaço para pensar em grande</small></div><button class="subtle-btn" id="clearChat">Limpar conversa</button></div><div class="messages" id="messages"><div class="welcome-message"><div class="bot-orb">✳</div><div><b>Olá! Eu sou o OmniAI.</b><p>Escolha uma ferramenta ou escreva sua primeira mensagem. As respostas reais ficam disponíveis depois de configurar uma API no servidor.</p></div></div></div>
+      <form id="chatForm" class="composer"><textarea id="promptInput" rows="1" placeholder="Pergunte qualquer coisa ao OmniAI..." aria-label="Sua mensagem"></textarea><div class="composer-bottom"><div class="composer-tools"><button type="button" class="tool-btn" id="attachBtn">＋ <span>Anexar arquivo</span></button><input type="file" id="fileInput" hidden accept=".txt,.md,.pdf,.png,.jpg,.jpeg"><span id="fileName"></span></div><button class="send-btn" type="submit">Enviar <span>↑</span></button></div></form><div class="disclaimer">A IA pode cometer erros. Revise informações importantes. APIs externas podem gerar custos.</div></div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
